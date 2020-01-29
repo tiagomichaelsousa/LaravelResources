@@ -1,6 +1,6 @@
 {
   "name": "tiagomichaelsousa/laravelresources",
-  "description": ":package_description",
+  "description": "Laravel Resources is a speed-up development package that allows you to create a boilerplate for Laravel apps with a default API structure.",
   "license": "MIT",
   "authors": [
     {
