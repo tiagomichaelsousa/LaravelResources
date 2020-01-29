@@ -1,0 +1,94 @@
+<?php
+
+namespace {{NAMESPACE}};
+
+use {{MODEL_NAMESPACE}}\{{MODEL_CLASS}};
+use {{MODEL_NAMESPACE}}\User;
+use Illuminate\Auth\Access\HandlesAuthorization;
+
+class {{CLASS_NAME}}
+{
+    use HandlesAuthorization;
+
+    /**
+     * Determine whether the user can view any {{MODEL_VARIABLE}}.
+     *
+     * @param  \{{MODEL_NAMESPACE}}\User  $user
+     * @return mixed
+     */
+    public function viewAny(User $user)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can view the {{MODEL_VARIABLE}}.
+     *
+     * @param  \{{MODEL_NAMESPACE}}\User  $user
+     * @param  \{{MODEL_NAMESPACE}}\{{MODEL_CLASS}}  ${{MODEL_VARIABLE}}
+     * @return mixed
+     */
+    public function view(User $user, {{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can create {{MODEL_VARIABLE}}.
+     *
+     * @param  \{{MODEL_NAMESPACE}}\User  $user
+     * @return mixed
+     */
+    public function create(User $user)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can update the {{MODEL_VARIABLE}}.
+     *
+     * @param  \{{MODEL_NAMESPACE}}\User  $user
+     * @param  \{{MODEL_NAMESPACE}}\{{MODEL_CLASS}}  ${{MODEL_VARIABLE}}
+     * @return mixed
+     */
+    public function update(User $user, {{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can delete the {{MODEL_VARIABLE}}.
+     *
+     * @param  \{{MODEL_NAMESPACE}}\User  $user
+     * @param  \{{MODEL_NAMESPACE}}\{{MODEL_CLASS}}  ${{MODEL_VARIABLE}}
+     * @return mixed
+     */
+    public function delete(User $user, {{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can restore the {{MODEL_VARIABLE}}.
+     *
+     * @param  \{{MODEL_NAMESPACE}}\User  $user
+     * @param  \{{MODEL_NAMESPACE}}\{{MODEL_CLASS}}  ${{MODEL_VARIABLE}}
+     * @return mixed
+     */
+    public function restore(User $user, {{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can permanently delete the {{MODEL_VARIABLE}}.
+     *
+     * @param  \{{MODEL_NAMESPACE}}\User  $user
+     * @param  \{{MODEL_NAMESPACE}}\{{MODEL_CLASS}}  ${{MODEL_VARIABLE}}
+     * @return mixed
+     */
+    public function forceDelete(User $user, {{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        //
+    }
+}

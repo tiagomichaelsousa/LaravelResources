@@ -1,0 +1,12 @@
+/*
+|--------------------------------------------------------------------------
+| {{MODEL_NAME}} endpoints
+|--------------------------------------------------------------------------
+ */
+Route::name('{{ROUTE_NAME}}.')->prefix('{{ROUTE_NAME}}')->group(function () {
+    Route::get('/', '{{CONTROLLER_NAME}}@index')->name('index');
+    Route::post('/', '{{CONTROLLER_NAME}}@store')->name('create');
+    Route::get('/{{{MODEL_VARIABLE}}}', '{{CONTROLLER_NAME}}@show')->name('show');
+    Route::patch('/{{{MODEL_VARIABLE}}}', '{{CONTROLLER_NAME}}@update')->name('update');
+    Route::delete('/{{{MODEL_VARIABLE}}}', '{{CONTROLLER_NAME}}@destroy')->name('destroy');
+});

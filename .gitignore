@@ -1,0 +1,8 @@
+/.phpunit.result.cache
+/build/
+/vendor/
+/tests/temp
+composer.lock
+composer.phar
+.idea
+/report

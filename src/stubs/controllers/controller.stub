@@ -1,0 +1,77 @@
+<?php
+
+namespace {{NAMESPACE}};
+
+use {{MODEL_NAMESPACE}};
+use {{RESOURCE_NAMESPACE}};
+use App\Http\Controllers\Controller;
+use {{REQUEST_NAMESPACE}};
+use {{RESOURCE_COLLECTION_NAMESPACE}};
+
+class {{CONTROLLER_NAME}} extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return {{RESOURCE_COLLECTION_NAMESPACE}}
+     */
+    public function index()
+    {
+        $this->authorize('viewAny', {{MODEL_CLASS}}::class);
+
+        {{INDEX_METHOD}}
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \{{REQUEST_NAMESPACE}}  $request
+     * @return \{{RESOURCE_NAMESPACE}}
+     */
+    public function store({{REQUEST_CLASS}} $request)
+    {
+        $this->authorize('create', {{MODEL_CLASS}}::class);
+
+        {{STORE_METHOD}}
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \{{MODEL_NAMESPACE}}  ${{MODEL_VARIABLE}}
+     * @return \{{RESOURCE_NAMESPACE}}
+     */
+    public function show({{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        $this->authorize('view', ${{MODEL_VARIABLE}});
+
+        {{SHOW_METHOD}}
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \{{REQUEST_NAMESPACE}}  $request
+     * @param  \{{MODEL_NAMESPACE}}  ${{MODEL_VARIABLE}}
+     * @return \{{RESOURCE_NAMESPACE}}
+     */
+    public function update({{REQUEST_CLASS}} $request, {{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        $this->authorize('update', ${{MODEL_VARIABLE}});
+
+        {{UPDATE_METHOD}}
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \{{MODEL_NAMESPACE}}  ${{MODEL_VARIABLE}}
+     * @return \{{RESOURCE_NAMESPACE}}
+     */
+    public function destroy({{MODEL_CLASS}} ${{MODEL_VARIABLE}})
+    {
+        $this->authorize('delete', ${{MODEL_VARIABLE}});
+
+        {{DESTROY_METHOD}}
+    }
+}
