@@ -3,7 +3,6 @@
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 use tiagomichaelsousa\LaravelResources\Exceptions\File as FileException;
 
 class CollectionGenerator implements Generator
@@ -26,20 +25,20 @@ class CollectionGenerator implements Generator
     }
 
     /**
-    * Get the Stub for the collection.
-    *
-    * @return string
-    */
+     * Get the Stub for the collection.
+     *
+     * @return string
+     */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/resources/api.collection.stub');
+        return File::get(__DIR__.'/../stubs/resources/api.collection.stub');
     }
 
     /**
-    * Get the replacements for the stub
-    *
-    * @return array
-    */
+     * Get the replacements for the stub.
+     *
+     * @return array
+     */
     public function replacements()
     {
         return array_merge([
@@ -51,10 +50,10 @@ class CollectionGenerator implements Generator
     }
 
     /**
-    * Verify if the resource already exists.
-    *
-    * @return mixed|\tiagomichaelsousa\LaravelResources\Exceptions\File
-    */
+     * Verify if the resource already exists.
+     *
+     * @return mixed|\tiagomichaelsousa\LaravelResources\Exceptions\File
+     */
     public function fileAlreadyExists($path)
     {
         if (File::exists($path)) {
@@ -63,40 +62,40 @@ class CollectionGenerator implements Generator
     }
 
     /**
-    * Verify if the directory and create one if it doesn't.
-    *
-    * @return boolean
-    */
+     * Verify if the directory and create one if it doesn't.
+     *
+     * @return bool
+     */
     public function directoryExists($path)
     {
-        return ! ! File::isDirectory($path) ?: make_directory($path);
+        return (bool) File::isDirectory($path) ?: make_directory($path);
     }
 
     /**
-    * Generate the class name.
-    *
-    * @return string
-    */
+     * Generate the class name.
+     *
+     * @return string
+     */
     public function className()
     {
-        return create_class_name($this->model, CollectionGenerator::class);
+        return create_class_name($this->model, self::class);
     }
 
     /**
-    * Generate the file name.
-    *
-    * @return string
-    */
+     * Generate the file name.
+     *
+     * @return string
+     */
     public function fileName()
     {
         return "{$this->className()}.php";
     }
 
     /**
-    * Handle the resource creation.
-    *
-    * @return void
-    */
+     * Handle the resource creation.
+     *
+     * @return void
+     */
     public function handle()
     {
         $namespace = config('laravel-resources.collections.namespace');

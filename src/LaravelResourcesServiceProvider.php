@@ -15,7 +15,6 @@ class LaravelResourcesServiceProvider extends ServiceProvider
         'tiagomichaelsousa\LaravelResources\Commands\ResourceCommand',
     ];
 
-
     /**
      * Perform post-registration booting of services.
      *
@@ -38,7 +37,7 @@ class LaravelResourcesServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-resources.php', 'laravel-resources');
     }
-    
+
     /**
      * Console-specific booting.
      *

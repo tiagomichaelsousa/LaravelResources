@@ -26,20 +26,20 @@ class RouteGenerator implements Generator
     }
 
     /**
-    * Get the Stub for the request.
-    *
-    * @return string
-    */
+     * Get the Stub for the request.
+     *
+     * @return string
+     */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/routes/api.routes.stub');
+        return File::get(__DIR__.'/../stubs/routes/api.routes.stub');
     }
 
     /**
-    * Get the replacements for the stub
-    *
-    * @return array
-    */
+     * Get the replacements for the stub.
+     *
+     * @return array
+     */
     public function replacements()
     {
         return array_merge([
@@ -51,10 +51,10 @@ class RouteGenerator implements Generator
     }
 
     /**
-    * Verify if the resource already exists.
-    *
-    * @return mixed|\tiagomichaelsousa\LaravelResources\Exceptions\File
-    */
+     * Verify if the resource already exists.
+     *
+     * @return mixed|\tiagomichaelsousa\LaravelResources\Exceptions\File
+     */
     public function fileAlreadyExists($path)
     {
         if (! File::exists($path)) {
@@ -63,43 +63,43 @@ class RouteGenerator implements Generator
     }
 
     /**
-    * Verify if the directory and create one if it doesn't.
-    *
-    * @return boolean
-    */
+     * Verify if the directory and create one if it doesn't.
+     *
+     * @return bool
+     */
     public function directoryExists($path)
     {
-        return ! ! File::isDirectory($path) ?: make_directory($path);
+        return (bool) File::isDirectory($path) ?: make_directory($path);
     }
 
     /**
-    * Generate the class name.
-    *
-    * @return string
-    */
+     * Generate the class name.
+     *
+     * @return string
+     */
     public function className()
     {
-        return "Route";
+        return 'Route';
     }
 
     /**
-    * Generate the file name.
-    *
-    * @return string
-    */
+     * Generate the file name.
+     *
+     * @return string
+     */
     public function fileName()
     {
         return config('laravel-resources.routes.filename');
     }
 
     /**
-    * Handle the resource creation.
-    *
-    * @return void
-    */
+     * Handle the resource creation.
+     *
+     * @return void
+     */
     public function handle()
     {
-        $path =  config('laravel-resources.routes.path');
+        $path = config('laravel-resources.routes.path');
         $directory = base_path($path);
         $path = "{$directory}/{$this->fileName()}";
 
