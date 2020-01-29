@@ -70,6 +70,10 @@ If you discover any security related issues, please email the [author](tiagomich
 
 License MIT. Please see the [license file](license.md) for more information.
 
+## Code Of Conduct
+
+Please see the [code of conduct](code_of_conduct.md) for more information.
+
 [ico-version]: https://img.shields.io/packagist/v/tiagomichaelsousa/laravelresources.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/tiagomichaelsousa/laravelresources.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tiagomichaelsousa/laravelresources/master.svg?style=flat-square
