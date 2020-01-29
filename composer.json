@@ -52,5 +52,7 @@
         "LaravelResources": "tiagomichaelsousa\\LaravelResources\\Facades\\LaravelResources"
       }
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
