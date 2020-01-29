@@ -1,4 +1,4 @@
-# Code Of Conduct
+# Code Of Conductd
 
 This code of conduct is derived from the Ruby code of conduct. Any violations of the code of conduct may be reported to [author](tiagomichaelsousa@gmail.com).
 
