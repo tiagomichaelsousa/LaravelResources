@@ -3,11 +3,9 @@
 namespace tiagomichaelsousa\LaravelResources\Tests;
 
 use tiagomichaelsousa\LaravelResources\Generators\ControllerGenerator;
-use tiagomichaelsousa\LaravelResources\Tests\TestCase;
 
 class ControllerGeneratorTest extends TestCase
 {
- 
     /** @test */
     public function it_generates_the_right_filename()
     {
@@ -32,8 +30,8 @@ class ControllerGeneratorTest extends TestCase
     public function it_creates_the_controller_file()
     {
         $generator = new ControllerGenerator($this->model);
-        
-        $config = namespace_path(config('laravel-resources.controllers.namespace') . "\\{$generator->fileName()}");
+
+        $config = namespace_path(config('laravel-resources.controllers.namespace')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -47,7 +45,7 @@ class ControllerGeneratorTest extends TestCase
 
         $generator = new ControllerGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.controllers.namespace') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.controllers.namespace')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -62,7 +60,7 @@ class ControllerGeneratorTest extends TestCase
 
         $generator = new ControllerGenerator($this->model);
         $generator->handle();
-        
+
         $this->assertEquals("{$this->model}Controller{$suffix}", $generator->className());
     }
 
@@ -72,7 +70,6 @@ class ControllerGeneratorTest extends TestCase
         config()->set('laravel-resources.controllers.prefix', $prefix = 'Prefix');
         config()->set('laravel-resources.controllers.suffix', null);
 
-  
         $generator = new ControllerGenerator($this->model);
         $generator->handle();
 

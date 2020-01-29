@@ -17,6 +17,6 @@ interface Generator
     public function className();
 
     public function fileName();
-    
+
     public function handle();
 }

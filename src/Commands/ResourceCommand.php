@@ -52,11 +52,11 @@ class ResourceCommand extends Command
     /**
      * Verify if the model exists to create the resources.
      *
-     * @return boolean
+     * @return bool
      */
     private function modelExists()
     {
-        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace')))) . "/{$this->model}.php");
+        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace'))))."/{$this->model}.php");
     }
 
     /**
@@ -66,7 +66,7 @@ class ResourceCommand extends Command
      */
     private function createResources()
     {
-        $this->info('Creating ' . count($this->resources) . ' resources ...');
+        $this->info('Creating '.count($this->resources).' resources ...');
         $this->line('');
 
         $bar = $this->getOutput()->createProgressBar(count($this->resources));
@@ -97,7 +97,7 @@ class ResourceCommand extends Command
         if (! $this->modelExists($this->model)) {
             $this->error("The model {$this->model} does not exists");
 
-            return ;
+            return;
         }
 
         $this->createResources();

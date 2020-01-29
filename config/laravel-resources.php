@@ -14,10 +14,10 @@ return [
     */
     'controllers' => [
         'namespace' => 'App\Http\Controllers',
-        'suffix' => "API",
+        'suffix' => 'API',
         'prefix' => null,
     ],
-    
+
     /*
     |--------------------------------------------------------------------------
     | Resources configs
@@ -33,13 +33,13 @@ return [
     'resources' => [
         'namespace' => 'App\Http\Resources',
         'suffix' => null,
-        'prefix' => null
+        'prefix' => null,
     ],
-      
+
     'collections' => [
         'namespace' => 'App\Http\Resources\Collections',
         'suffix' => null,
-        'prefix' => null
+        'prefix' => null,
     ],
 
     /*
@@ -57,7 +57,7 @@ return [
     'requests' => [
         'namespace' => 'App\Http\Requests',
         'suffix' => null,
-        'prefix' => null
+        'prefix' => null,
     ],
 
     /*
@@ -73,7 +73,7 @@ return [
     'policies' => [
         'namespace' => 'App\Policies',
         'suffix' => null,
-        'prefix' => null
+        'prefix' => null,
     ],
 
     /*

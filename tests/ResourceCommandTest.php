@@ -2,11 +2,8 @@
 
 namespace tiagomichaelsousa\LaravelResources\Tests;
 
-use tiagomichaelsousa\LaravelResources\Tests\TestCase;
-
 class ResourceCommandTest extends TestCase
 {
-
     /** @test */
     public function it_requires_that_the_model_exists()
     {
