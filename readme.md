@@ -73,10 +73,10 @@ License MIT. Please see the [license file](license.md) for more information.
 [ico-version]: https://img.shields.io/packagist/v/tiagomichaelsousa/laravelresources.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/tiagomichaelsousa/laravelresources.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tiagomichaelsousa/laravelresources/master.svg?style=flat-square
-[ico-styleci]: https://github.styleci.io/repos/7548986/shield
+[ico-styleci]: https://github.styleci.io/repos/236964942/shield
 [link-packagist]: https://packagist.org/packages/tiagomichaelsousa/laravelresources
 [link-downloads]: https://packagist.org/packages/tiagomichaelsousa/laravelresources
 [link-travis]: https://travis-ci.org/tiagomichaelsousa/laravelresources
-[link-styleci]: https://styleci.io/repos/12345678
+[link-styleci]: https://styleci.io/repos/236964942
 [link-author]: https://github.com/tiagomichaelsousa
 [link-contributors]: ../../contributors

@@ -1,1 +1,7 @@
 preset: laravel
+
+finder:
+  exclude:
+    - "tests"
+  name:
+    - "*.php"
