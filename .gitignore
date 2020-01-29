@@ -7,3 +7,4 @@ composer.phar
 .idea
 /report
 .DS_Store
+coverage.clover
