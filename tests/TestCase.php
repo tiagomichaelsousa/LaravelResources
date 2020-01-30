@@ -48,6 +48,9 @@ abstract class TestCase extends Orchestra
     {
         File::cleanDirectory(base_path('app'));
         File::deleteDirectory(base_path('routes'));
+        File::cleanDirectory(database_path('migrations'));
+        File::cleanDirectory(database_path('factories'));
+        File::cleanDirectory(database_path('seeds'));
     }
 
     /**
