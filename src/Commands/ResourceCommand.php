@@ -125,11 +125,11 @@ class ResourceCommand extends Command
         if (! $this->modelExists($this->model)) {
             $this->info("The model {$this->model} does not exists.");
 
-            if ($this->confirm('Should I create it?', true)) {
-                $this->createModel();
+            if (! $this->confirm('Should I create it?', true)) {
+                return;
             }
 
-            return;
+            $this->createModel();
         }
 
         $this->createResources();
