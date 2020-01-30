@@ -1,9 +1,18 @@
-# LaravelResources
+# Laravel Resources
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
+<p align="center">
+    <img src="./docs/demo.gif" alt="Laravel Resources Demo" width="480">
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/packagist/v/tiagomichaelsousa/laravelresources.svg?style=flat-square" alt="Packagist Version">
+    <img src="https://img.shields.io/packagist/dt/tiagomichaelsousa/laravelresources.svg?style=flat-square" alt="Packagist Downloads">
+    <img src="https://img.shields.io/travis/tiagomichaelsousa/laravelresources/master.svg?style=flat-square" alt="Build Status">
+    <img src="https://github.styleci.io/repos/236964942/shield" alt="Style Status">
+    <img src="https://poser.pugx.org/tiagomichaelsousa/laravelresources/license?format=flat-square" alt="Licence">
+</p>
+
+---
 
 Laravel Resources is a speed-up development package that allows you to create a boilerplate for Laravel apps with a default API structure.
 
