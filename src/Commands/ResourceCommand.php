@@ -30,7 +30,7 @@ class ResourceCommand extends Command
     ];
 
     /**
-    * The resources that can be created if the model doesnt exists.
+    * The resources that can be created if the model does not exists.
     *
     * @var array
     */
@@ -71,7 +71,7 @@ class ResourceCommand extends Command
     }
 
     /**
-    * Create the model if doesnt exists.
+    * Create the model if does not exists.
     *
     * @return void
     */
@@ -89,7 +89,7 @@ class ResourceCommand extends Command
     }
 
     /**
-     * Create the resources chosen by the user.
+     * Create the resources for the model.
      *
      * @return void
      */
