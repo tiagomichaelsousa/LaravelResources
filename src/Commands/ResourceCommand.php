@@ -29,10 +29,10 @@ class ResourceCommand extends Command
     ];
 
     /**
-    * The resources that can be created if the model does not exists.
-    *
-    * @var array
-    */
+     * The resources that can be created if the model does not exists.
+     *
+     * @var array
+     */
     private $modelResources = [
         'migration', 'factory', 'seeder',
     ];
@@ -70,10 +70,10 @@ class ResourceCommand extends Command
     }
 
     /**
-    * Create the model if does not exists.
-    *
-    * @return void
-    */
+     * Create the model if does not exists.
+     *
+     * @return void
+     */
     private function createModel()
     {
         $flags = [];
