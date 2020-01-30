@@ -3,6 +3,8 @@
 namespace tiagomichaelsousa\LaravelResources\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use tiagomichaelsousa\LaravelResources\Generators\CollectionGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ControllerGenerator;
@@ -25,6 +27,15 @@ class ResourceCommand extends Command
         PolicyGenerator::class,
         ControllerGenerator::class,
         RouteGenerator::class,
+    ];
+
+    /**
+    * The resources that can be created if the model doesnt exists.
+    *
+    * @var array
+    */
+    private $modelResources = [
+        'migration', 'factory', 'seeder'
     ];
 
     /**
@@ -57,6 +68,24 @@ class ResourceCommand extends Command
     private function modelExists()
     {
         return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace'))))."/{$this->model}.php");
+    }
+
+    /**
+    * Create the model if doesnt exists.
+    *
+    * @return void
+    */
+    private function createModel()
+    {
+        $flags = [];
+
+        foreach ($this->modelResources as $resource) {
+            if ($this->confirm("Should I create the {$resource} for {$this->model}?", true)) {
+                array_push($flags, " -".substr($resource, 0, 1));
+            }
+        }
+
+        Artisan::call("make:model {$this->model}" . implode('', $flags));
     }
 
     /**
@@ -95,9 +124,13 @@ class ResourceCommand extends Command
         $this->model = $this->argument('model');
 
         if (! $this->modelExists($this->model)) {
-            $this->error("The model {$this->model} does not exists");
+            $this->info("The model {$this->model} does not exists.");
 
-            return;
+            if ($this->confirm("Should I create it?", true)) {
+                $this->createModel();
+            }
+
+            return ;
         }
 
         $this->createResources();
