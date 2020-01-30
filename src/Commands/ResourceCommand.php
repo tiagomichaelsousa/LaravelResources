@@ -3,7 +3,6 @@
 namespace tiagomichaelsousa\LaravelResources\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use tiagomichaelsousa\LaravelResources\Generators\CollectionGenerator;
@@ -35,7 +34,7 @@ class ResourceCommand extends Command
     * @var array
     */
     private $modelResources = [
-        'migration', 'factory', 'seeder'
+        'migration', 'factory', 'seeder',
     ];
 
     /**
@@ -81,11 +80,11 @@ class ResourceCommand extends Command
 
         foreach ($this->modelResources as $resource) {
             if ($this->confirm("Should I create the {$resource} for {$this->model}?", true)) {
-                array_push($flags, " -".substr($resource, 0, 1));
+                array_push($flags, ' -'.substr($resource, 0, 1));
             }
         }
 
-        Artisan::call("make:model {$this->model}" . implode('', $flags));
+        Artisan::call("make:model {$this->model}".implode('', $flags));
     }
 
     /**
@@ -126,11 +125,11 @@ class ResourceCommand extends Command
         if (! $this->modelExists($this->model)) {
             $this->info("The model {$this->model} does not exists.");
 
-            if ($this->confirm("Should I create it?", true)) {
+            if ($this->confirm('Should I create it?', true)) {
                 $this->createModel();
             }
 
-            return ;
+            return;
         }
 
         $this->createResources();
