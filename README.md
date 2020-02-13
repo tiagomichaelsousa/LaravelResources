@@ -105,12 +105,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.xgeeks.io"><img src="https://avatars1.githubusercontent.com/u/15105462?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Ferreira</b></sub></a><br /><a href="https://github.com/tiagomichaelsousa/LaravelResources/commits?author=RafaelFerreiraTVD" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/tiagomichaelsousa"><img src="https://avatars1.githubusercontent.com/u/28356381?v=4" width="100px;" alt=""/><br /><sub><b>tiagomichaelsousa</b></sub></a><br /><a href="https://github.com/tiagomichaelsousa/LaravelResources/commits?author=tiagomichaelsousa" title="Code">💻</a> <a href="https://github.com/tiagomichaelsousa/LaravelResources/commits?author=tiagomichaelsousa" title="Documentation">📖</a> <a href="#content-tiagomichaelsousa" title="Content">🖋</a> <a href="https://github.com/tiagomichaelsousa/LaravelResources/pulls?q=is%3Apr+reviewed-by%3Atiagomichaelsousa" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
