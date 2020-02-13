@@ -1,7 +1,4 @@
 # Laravel Resources
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center">
     <img src="./docs/demo.gif" alt="Laravel Resources Demo" width="480">
@@ -13,6 +10,7 @@
     <img src="https://img.shields.io/travis/tiagomichaelsousa/laravelresources/master.svg?style=flat-square" alt="Build Status">
     <img src="https://github.styleci.io/repos/236964942/shield" alt="Style Status">
     <img src="https://poser.pugx.org/tiagomichaelsousa/laravelresources/license?format=flat-square" alt="Licence">
+    <img src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square" alt="All Contributors">
 </p>
 
 ---
@@ -112,6 +110,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
