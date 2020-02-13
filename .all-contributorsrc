@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "RafaelFerreiraTVD",
+      "name": "Rafael Ferreira",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15105462?v=4",
+      "profile": "http://www.xgeeks.io",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "LaravelResources",
+  "projectOwner": "tiagomichaelsousa",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

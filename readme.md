@@ -10,6 +10,7 @@
     <img src="https://img.shields.io/travis/tiagomichaelsousa/laravelresources/master.svg?style=flat-square" alt="Build Status">
     <img src="https://github.styleci.io/repos/236964942/shield" alt="Style Status">
     <img src="https://poser.pugx.org/tiagomichaelsousa/laravelresources/license?format=flat-square" alt="Licence">
+    <img src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square" alt="All Contributors">
 </p>
 
 ---
@@ -68,7 +69,7 @@ Please see [contributing.md](contributing.md) for details and a todolist.
 
 ## Security
 
-If you discover any security related issues, please email the [author](tiagomichaelsousa@gmail.com) instead of using the issue tracker.
+If you discover any security related issues, please email the [author](mailto:tiagomichaelsousa@gmail.com) instead of using the issue tracker.
 
 ## Credits
 
@@ -93,3 +94,23 @@ Please see the [code of conduct](code_of_conduct.md) for more information.
 [link-styleci]: https://styleci.io/repos/236964942
 [link-author]: https://github.com/tiagomichaelsousa
 [link-contributors]: ../../contributors
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://www.xgeeks.io"><img src="https://avatars1.githubusercontent.com/u/15105462?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Ferreira</b></sub></a><br /><a href="https://github.com/tiagomichaelsousa/LaravelResources/commits?author=RafaelFerreiraTVD" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
