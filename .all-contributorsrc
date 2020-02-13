@@ -13,6 +13,18 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "tiagomichaelsousa",
+      "name": "tiagomichaelsousa",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/28356381?v=4",
+      "profile": "https://github.com/tiagomichaelsousa",
+      "contributions": [
+        "code",
+        "doc",
+        "content",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
