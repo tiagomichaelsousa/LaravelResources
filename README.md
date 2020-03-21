@@ -1,5 +1,7 @@
 # Laravel Resources
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/20a308e450504513bc56abaf5e1d3270)](https://app.codacy.com/manual/tiagomichaelsousa/LaravelResources?utm_source=github.com&utm_medium=referral&utm_content=tiagomichaelsousa/LaravelResources&utm_campaign=Badge_Grade_Settings)
+
 <p align="center">
     <img src="./docs/demo.gif" alt="Laravel Resources Demo" width="480">
 </p>
