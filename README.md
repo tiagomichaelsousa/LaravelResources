@@ -11,6 +11,9 @@
     <img src="https://github.styleci.io/repos/236964942/shield" alt="Style Status">
     <img src="https://poser.pugx.org/tiagomichaelsousa/laravelresources/license?format=flat-square" alt="Licence">
     <img src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square" alt="All Contributors">
+    <img src="https://api.codacy.com/project/badge/Grade/8c5fafbbbf524b4db771a7bb1c55bb39" alt="Code Quality">
+    <img src="https://api.codacy.com/project/badge/Coverage/8c5fafbbbf524b4db771a7bb1c55bb39" alt="Code Coverage">
+
 </p>
 
 ---
