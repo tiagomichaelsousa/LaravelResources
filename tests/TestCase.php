@@ -24,6 +24,8 @@ abstract class TestCase extends Orchestra
     {
         parent::setUp();
 
+        $this->clearDirectories();
+
         $this->initialize();
     }
 
@@ -35,8 +37,6 @@ abstract class TestCase extends Orchestra
     protected function tearDown(): void
     {
         parent::tearDown();
-
-        $this->clearDirectories();
     }
 
     /**

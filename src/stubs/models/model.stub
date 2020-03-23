@@ -1,0 +1,17 @@
+<?php
+
+namespace {{NAMESPACE}};
+
+use Illuminate\Database\Eloquent\Model;
+
+class {{CLASS_NAME}} extends Model
+{
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [];
+
+}

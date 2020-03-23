@@ -11,6 +11,7 @@ use tiagomichaelsousa\LaravelResources\Generators\PolicyGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\RequestGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ResourceGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\RouteGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\ModelGenerator;
 
 class ResourceCommand extends Command
 {
@@ -34,7 +35,9 @@ class ResourceCommand extends Command
      * @var array
      */
     private $modelResources = [
-        'migration', 'factory', 'seeder',
+        'migration',
+        'factory', 
+        'seeder',
     ];
 
     /**
@@ -74,17 +77,14 @@ class ResourceCommand extends Command
      *
      * @return void
      */
-    private function createModel()
+    private function createModelResources()
     {
-        $flags = [];
-
         foreach ($this->modelResources as $resource) {
             if ($this->confirm("Should I create the {$resource} for {$this->model}?", true)) {
-                array_push($flags, ' -'.substr($resource, 0, 1));
+                $filename = $this->model . ucfirst($resource);
+                Artisan::call("make:{$resource} {$filename}");
             }
         }
-
-        Artisan::call("make:model {$this->model}".implode('', $flags));
     }
 
     /**
@@ -129,7 +129,9 @@ class ResourceCommand extends Command
                 return;
             }
 
-            $this->createModel();
+            (new ModelGenerator($this->model))->handle();
+
+            $this->createModelResources();
         }
 
         $this->createResources();
