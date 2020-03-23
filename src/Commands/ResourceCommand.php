@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use tiagomichaelsousa\LaravelResources\Generators\CollectionGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ControllerGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\ModelGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\PolicyGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\RequestGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ResourceGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\RouteGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\ModelGenerator;
 
 class ResourceCommand extends Command
 {
@@ -36,7 +36,7 @@ class ResourceCommand extends Command
      */
     private $modelResources = [
         'migration',
-        'factory', 
+        'factory',
         'seeder',
     ];
 
@@ -81,7 +81,7 @@ class ResourceCommand extends Command
     {
         foreach ($this->modelResources as $resource) {
             if ($this->confirm("Should I create the {$resource} for {$this->model}?", true)) {
-                $filename = $this->model . ucfirst($resource);
+                $filename = $this->model.ucfirst($resource);
                 Artisan::call("make:{$resource} {$filename}");
             }
         }
