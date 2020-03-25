@@ -45,7 +45,7 @@ class RouteGenerator implements Generator
         return array_merge([
             '{{MODEL_NAME}}' => $this->model,
             '{{MODEL_VARIABLE}}' => lcfirst($this->model),
-            '{{CONTROLLER_NAME}}' => "{$this->model}ControllerAPI",
+            '{{CONTROLLER_NAME}}' => create_class_name($this->model, 'ControllerGenerator'),
             '{{ROUTE_NAME}}' => Str::plural(Str::kebab($this->model)),
         ]);
     }
