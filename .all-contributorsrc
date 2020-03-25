@@ -25,6 +25,16 @@
         "content",
         "review"
       ]
+    },
+    {
+      "login": "white-hyena",
+      "name": "White Hyena",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/62600397?v=4",
+      "profile": "https://github.com/white-hyena",
+      "contributions": [
+        "code",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
