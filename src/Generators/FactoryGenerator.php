@@ -31,7 +31,7 @@ class FactoryGenerator implements Generator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/factories/factory.stub');
+        return File::get(__DIR__.'/../stubs/factories/factory.stub');
     }
 
     /**
