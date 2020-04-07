@@ -33,7 +33,7 @@ class MigrationGenerator implements Generator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/migrations/migration.stub');
+        return File::get(__DIR__.'/../stubs/migrations/migration.stub');
     }
 
     /**
@@ -79,6 +79,7 @@ class MigrationGenerator implements Generator
     public function className()
     {
         $name = Str::plural($this->model);
+
         return "Create{$name}Table";
     }
 
@@ -89,8 +90,9 @@ class MigrationGenerator implements Generator
      */
     public function fileName()
     {
-        $date = Carbon::now()->format("Y_m_d_Hms");
+        $date = Carbon::now()->format('Y_m_d_Hms');
         $name = Str::lower(Str::snake($this->className()));
+
         return "{$date}_{$name}.php";
     }
 

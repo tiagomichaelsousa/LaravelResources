@@ -32,7 +32,7 @@ class SeederGenerator implements Generator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/seeds/seed.stub');
+        return File::get(__DIR__.'/../stubs/seeds/seed.stub');
     }
 
     /**
@@ -80,6 +80,7 @@ class SeederGenerator implements Generator
     public function className()
     {
         $plural = Str::plural($this->model);
+
         return "{$plural}TableSeeder";
     }
 
