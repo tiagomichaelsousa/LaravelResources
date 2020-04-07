@@ -1,3 +1,3 @@
-${{CLASS_VARIABLE}} = {{CLASS_NAME}}::create($request->all());
+${{CLASS_VARIABLE}} = {{CLASS_NAME}}::create($request->validated());
 
         return new {{RESOURCE_NAME}}(${{CLASS_VARIABLE}});

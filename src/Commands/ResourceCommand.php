@@ -3,15 +3,17 @@
 namespace tiagomichaelsousa\LaravelResources\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use tiagomichaelsousa\LaravelResources\Generators\CollectionGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ControllerGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\FactoryGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\MigrationGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ModelGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\PolicyGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\RequestGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ResourceGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\RouteGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\SeederGenerator;
 
 class ResourceCommand extends Command
 {
@@ -35,9 +37,9 @@ class ResourceCommand extends Command
      * @var array
      */
     private $modelResources = [
-        'migration',
-        'factory',
-        'seeder',
+        'migration' => MigrationGenerator::class,
+        'factory' => FactoryGenerator::class,
+        'seeder' => SeederGenerator::class,
     ];
 
     /**
@@ -69,7 +71,7 @@ class ResourceCommand extends Command
      */
     private function modelExists()
     {
-        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace'))))."/{$this->model}.php");
+        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace')))) . "/{$this->model}.php");
     }
 
     /**
@@ -79,10 +81,10 @@ class ResourceCommand extends Command
      */
     private function createModelResources()
     {
-        foreach ($this->modelResources as $resource) {
+        foreach ($this->modelResources as $resource => $generator) {
+
             if ($this->confirm("Should I create the {$resource} for {$this->model}?", true)) {
-                $filename = $this->model.ucfirst($resource);
-                Artisan::call("make:{$resource} {$filename}");
+                array_push($this->resources, $generator);
             }
         }
     }
@@ -94,7 +96,7 @@ class ResourceCommand extends Command
      */
     private function createResources()
     {
-        $this->info('Creating '.count($this->resources).' resources ...');
+        $this->info('Creating ' . count($this->resources) . ' resources ...');
         $this->line('');
 
         $bar = $this->getOutput()->createProgressBar(count($this->resources));
@@ -106,6 +108,10 @@ class ResourceCommand extends Command
 
         $bar->finish();
         $this->line('');
+        $this->line('');
+
+        exec('composer dumpautoload');
+
         $this->line('');
 
         $this->info('🚀 Resources created successfully 🚀');
@@ -122,10 +128,10 @@ class ResourceCommand extends Command
 
         $this->model = $this->argument('model');
 
-        if (! $this->modelExists($this->model)) {
+        if (!$this->modelExists($this->model)) {
             $this->info("The model {$this->model} does not exists.");
 
-            if (! $this->confirm('Should I create it?', true)) {
+            if (!$this->confirm('Should I create it?', true)) {
                 return;
             }
 

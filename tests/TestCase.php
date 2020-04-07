@@ -51,6 +51,7 @@ abstract class TestCase extends Orchestra
         File::cleanDirectory(database_path('migrations'));
         File::cleanDirectory(database_path('factories'));
         File::cleanDirectory(database_path('seeds'));
+        File::cleanDirectory(database_path('dummy'));
     }
 
     /**
@@ -60,11 +61,11 @@ abstract class TestCase extends Orchestra
      */
     private function initialize()
     {
-        if (! File::exists(namespace_path(config('laravel-resources.models.namespace')).'/User.php')) {
+        if (!File::exists(namespace_path(config('laravel-resources.models.namespace')) . '/User.php')) {
             $this->artisan('make:model User');
         }
 
-        if (! File::exists($route = namespace_path(config('laravel-resources.routes.path')).'/'.config('laravel-resources.routes.filename'))) {
+        if (!File::exists($route = namespace_path(config('laravel-resources.routes.path')) . '/' . config('laravel-resources.routes.filename'))) {
             make_directory(namespace_path(config('laravel-resources.routes.path')));
             file_put_contents($route, '<?php');
         }

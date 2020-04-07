@@ -103,4 +103,19 @@ return [
         'path' => 'routes',
         'filename' => 'api.php',
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Database configs
+    |--------------------------------------------------------------------------
+    |
+    | This config is used to set the path for the migrations, factories and seeds
+    | This configs should not be edited if you dont change the laravel mapping folders
+    |
+    */
+    'database' => [
+        'migrations' => 'database/migrations',
+        'factories' => 'database/factories',
+        'seeds' => 'database/seeds',
+    ],
 ];

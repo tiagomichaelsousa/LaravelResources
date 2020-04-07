@@ -1,0 +1,32 @@
+<?php
+
+use {{MODEL_NAMESPACE}}\{{MODEL_NAME}};
+use Illuminate\Database\Seeder;
+
+class {{CLASS_NAME}} extends Seeder
+{
+    private $numberOf{{MODEL_PLURAL}} = 10;
+
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $this->command->table(['{{MODEL_PLURAL}} table seeder notice'], [
+            ['Edit this file to change the number of {{MODEL_PLURAL}} created'],
+        ]);
+
+        $this->command->info('Creating ' . $this->numberOf{{MODEL_PLURAL}} . ' {{MODEL_PLURAL}} ...');
+        $bar = $this->command->getOutput()->createProgressBar($this->numberOf{{MODEL_PLURAL}});
+
+        for ($i = 0; $i < $this->numberOf{{MODEL_PLURAL}}; ++$i) {
+            factory({{MODEL_NAME}}::class)->create();
+            $bar->advance();
+        }
+
+        $bar->finish();
+        $this->command->info('');
+    }
+}
