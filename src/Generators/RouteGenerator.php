@@ -2,8 +2,8 @@
 
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 use tiagomichaelsousa\LaravelResources\Exceptions\File as FileException;
 
 class RouteGenerator extends AbstractGenerator

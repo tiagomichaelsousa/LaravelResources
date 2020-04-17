@@ -23,7 +23,7 @@ abstract class AbstractGenerator implements Generator
     {
         $this->model = $model;
     }
-    
+
     /**
      * Verify if the directory and create one if it doesn't.
      *
@@ -45,7 +45,7 @@ abstract class AbstractGenerator implements Generator
             throw FileException::alreadyExistsInDirectory($path);
         }
     }
-    
+
     /**
      * Generate the file name.
      *
