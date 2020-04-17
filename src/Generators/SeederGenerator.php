@@ -2,29 +2,11 @@
 
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use tiagomichaelsousa\LaravelResources\Exceptions\File as FileException;
+use Illuminate\Support\Facades\File;
 
-class SeederGenerator implements Generator
+class SeederGenerator extends AbstractGenerator
 {
-    /**
-     * The model for that will be used in the policy.
-     *
-     * @var string
-     */
-    private $model;
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct($model)
-    {
-        $this->model = $model;
-    }
-
     /**
      * Get the Stub for the policy.
      *
@@ -51,28 +33,6 @@ class SeederGenerator implements Generator
     }
 
     /**
-     * Verify if the resource already exists.
-     *
-     * @return mixed|\tiagomichaelsousa\LaravelResources\Exceptions\File
-     */
-    public function fileAlreadyExists($path)
-    {
-        if (File::exists($path)) {
-            throw FileException::alreadyExistsInDirectory($path);
-        }
-    }
-
-    /**
-     * Verify if the directory and create one if it doesn't.
-     *
-     * @return bool
-     */
-    public function directoryExists($path)
-    {
-        return (bool) File::isDirectory($path) ?: make_directory($path);
-    }
-
-    /**
      * Generate the class name.
      *
      * @return string
@@ -82,16 +42,6 @@ class SeederGenerator implements Generator
         $plural = Str::plural($this->model);
 
         return "{$plural}TableSeeder";
-    }
-
-    /**
-     * Generate the file name.
-     *
-     * @return string
-     */
-    public function fileName()
-    {
-        return "{$this->className()}.php";
     }
 
     /**
