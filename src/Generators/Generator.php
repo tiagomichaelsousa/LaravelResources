@@ -4,8 +4,6 @@ namespace tiagomichaelsousa\LaravelResources\Generators;
 
 interface Generator
 {
-    public function __construct($model);
-
     public function getStub();
 
     public function replacements();

@@ -3,27 +3,9 @@
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
 use Illuminate\Support\Facades\File;
-use tiagomichaelsousa\LaravelResources\Exceptions\File as FileException;
 
-class CollectionGenerator implements Generator
+class CollectionGenerator extends AbstractGenerator
 {
-    /**
-     * The model for that will be used in the collection.
-     *
-     * @var string
-     */
-    private $model;
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct($model)
-    {
-        $this->model = $model;
-    }
-
     /**
      * Get the Stub for the collection.
      *
@@ -50,28 +32,6 @@ class CollectionGenerator implements Generator
     }
 
     /**
-     * Verify if the resource already exists.
-     *
-     * @return mixed|\tiagomichaelsousa\LaravelResources\Exceptions\File
-     */
-    public function fileAlreadyExists($path)
-    {
-        if (File::exists($path)) {
-            throw FileException::alreadyExistsInDirectory($path);
-        }
-    }
-
-    /**
-     * Verify if the directory and create one if it doesn't.
-     *
-     * @return bool
-     */
-    public function directoryExists($path)
-    {
-        return (bool) File::isDirectory($path) ?: make_directory($path);
-    }
-
-    /**
      * Generate the class name.
      *
      * @return string
@@ -79,16 +39,6 @@ class CollectionGenerator implements Generator
     public function className()
     {
         return create_class_name($this->model, self::class);
-    }
-
-    /**
-     * Generate the file name.
-     *
-     * @return string
-     */
-    public function fileName()
-    {
-        return "{$this->className()}.php";
     }
 
     /**
