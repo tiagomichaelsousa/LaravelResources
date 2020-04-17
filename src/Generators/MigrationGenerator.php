@@ -3,8 +3,8 @@
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
 use Carbon\Carbon;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class MigrationGenerator extends AbstractGenerator
 {
