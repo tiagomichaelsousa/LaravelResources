@@ -35,6 +35,16 @@
         "code",
         "content"
       ]
+    },
+    {
+      "login": "pkboom",
+      "name": "Keunbae Park",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13960169?v=4",
+      "profile": "https://github.com/pkboom",
+      "contributions": [
+        "code",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
