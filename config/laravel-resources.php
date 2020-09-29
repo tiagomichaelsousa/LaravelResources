@@ -87,7 +87,7 @@ return [
     |
     */
     'models' => [
-        'namespace' => 'App',
+        'namespace' => 'App\Models',
     ],
 
     /*
