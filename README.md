@@ -20,6 +20,13 @@
 
 Laravel Resources is a speed-up development package that allows you to create a boilerplate for Laravel apps with a default API structure.
 
+## Versions
+
+| Laravel | Laravel Resources |
+| ------- | ----------------- |
+| 7.x     | v1.7              |
+| 8.x     | v2.x              |
+
 ## Installation
 
 Via Composer
@@ -46,9 +53,9 @@ $ php artisan vendor:publish --provider="tiagomichaelsousa\LaravelResources\Lara
 
 **Notes:**
 
-- This package is fully configurable. You can change all the namespaces for the resources that will be created in the config file.
-- Don't forget to edit the request file in order to add your default validation for the model.
-- Don't forget to edit the policy file in order to fulfill your app business logic.
+-   This package is fully configurable. You can change all the namespaces for the resources that will be created in the config file.
+-   Don't forget to edit the request file in order to add your default validation for the model.
+-   Don't forget to edit the policy file in order to fulfill your app business logic.
 
 ## Change log
 
@@ -76,8 +83,8 @@ If you discover any security related issues, please email the [author](mailto:ti
 
 ## Credits
 
-- [@tiagomichaelsousa][link-author]
-- [All Contributors][link-contributors]
+-   [@tiagomichaelsousa][link-author]
+-   [All Contributors][link-contributors]
 
 ## License
 
@@ -116,6 +123,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

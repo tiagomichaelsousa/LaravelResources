@@ -28,7 +28,7 @@ class RouteGenerator extends AbstractGenerator
         return array_merge([
             '{{MODEL_NAME}}' => $this->model,
             '{{MODEL_VARIABLE}}' => lcfirst($this->model),
-            '{{CONTROLLER_NAME}}' => create_class_name($this->model, 'ControllerGenerator'),
+            '{{CONTROLLER_NAME}}' => $this->generateControllerName(),
             '{{ROUTE_NAME}}' => Str::plural(Str::kebab($this->model)),
         ]);
     }
@@ -83,6 +83,21 @@ class RouteGenerator extends AbstractGenerator
 
         $this->directoryExists($directory);
 
-        file_put_contents($path, [$stub, PHP_EOL], FILE_APPEND);
+        $controllerNamespace = config('laravel-resources.controllers.namespace');
+        $controllerImport = "use {$controllerNamespace}\\{$this->generateControllerName()}";
+        $content = str_replace("<?php\n", "<?php\n\n$controllerImport;", file_get_contents($path));
+        file_put_contents($path, $content);
+
+        file_put_contents($path, [$stub, PHP_EOL], FILE_APPEND | FILE_USE_INCLUDE_PATH);
+    }
+
+    /**
+     * Generates the controller name.
+     *
+     * @return string
+     */
+    private function generateControllerName()
+    {
+        return create_class_name($this->model, 'ControllerGenerator');
     }
 }

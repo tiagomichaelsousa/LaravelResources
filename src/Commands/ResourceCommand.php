@@ -107,13 +107,13 @@ class ResourceCommand extends Command
 
         $bar->finish();
         $this->line('');
-        $this->line('');
-
-        exec('composer dumpautoload');
 
         $this->line('');
 
         $this->info('🚀 Resources created successfully 🚀');
+        $this->line('');
+
+        exec('composer dumpautoload');
     }
 
     /**
