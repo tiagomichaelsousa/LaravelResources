@@ -15,7 +15,7 @@ class RouteGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/routes/api.routes.stub');
+        return File::get(__DIR__.'/../stubs/routes/api.routes.stub');
     }
 
     /**
