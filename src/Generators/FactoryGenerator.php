@@ -13,7 +13,7 @@ class FactoryGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/factories/factory.stub');
+        return File::get(__DIR__.'/../stubs/factories/factory.stub');
     }
 
     /**
