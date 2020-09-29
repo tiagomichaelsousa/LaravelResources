@@ -49,7 +49,7 @@ class ResourceCommandTest extends TestCase
         $this->defaultQuestions(['migration', 'factory', 'seeder']);
 
         $this->assertEquals(1, collect(File::files(database_path("/migrations")))->count());
-        $this->assertEquals(1, collect(File::files(database_path("/seeds")))->count());
+        $this->assertEquals(1, collect(File::files(database_path("/seeders")))->count());
         $this->assertEquals(1, collect(File::files(database_path("/factories")))->count());
     }
 
@@ -58,7 +58,7 @@ class ResourceCommandTest extends TestCase
     {
         $this->defaultQuestions(['seeder']);
 
-        $this->assertEquals(1, collect(File::files(database_path("/seeds")))->count());
+        $this->assertEquals(1, collect(File::files(database_path("/seeders")))->count());
     }
 
     /**
