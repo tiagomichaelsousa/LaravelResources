@@ -23,12 +23,12 @@ class ResourceCommand extends Command
      * @var array
      */
     private $resources = [
-        // ResourceGenerator::class,
-        // CollectionGenerator::class,
-        // RequestGenerator::class,
-        // PolicyGenerator::class,
-        // ControllerGenerator::class,
-        // RouteGenerator::class,
+        ResourceGenerator::class,
+        CollectionGenerator::class,
+        RequestGenerator::class,
+        PolicyGenerator::class,
+        ControllerGenerator::class,
+        RouteGenerator::class,
     ];
 
     /**
@@ -37,8 +37,8 @@ class ResourceCommand extends Command
      * @var array
      */
     private $modelResources = [
-        // 'migration' => MigrationGenerator::class,
-        // 'factory' => FactoryGenerator::class,
+        'migration' => MigrationGenerator::class,
+        'factory' => FactoryGenerator::class,
         'seeder' => SeederGenerator::class,
     ];
 
@@ -71,7 +71,7 @@ class ResourceCommand extends Command
      */
     private function modelExists()
     {
-        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace'))))."/{$this->model}.php");
+        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace')))) . "/{$this->model}.php");
     }
 
     /**
@@ -95,7 +95,7 @@ class ResourceCommand extends Command
      */
     private function createResources()
     {
-        $this->info('Creating '.count($this->resources).' resources ...');
+        $this->info('Creating ' . count($this->resources) . ' resources ...');
         $this->line('');
 
         $bar = $this->getOutput()->createProgressBar(count($this->resources));
@@ -107,13 +107,13 @@ class ResourceCommand extends Command
 
         $bar->finish();
         $this->line('');
-        $this->line('');
-
-        exec('composer dumpautoload');
 
         $this->line('');
 
         $this->info('🚀 Resources created successfully 🚀');
+        $this->line('');
+
+        exec('composer dumpautoload');
     }
 
     /**
@@ -127,10 +127,10 @@ class ResourceCommand extends Command
 
         $this->model = $this->argument('model');
 
-        if (! $this->modelExists()) {
+        if (!$this->modelExists()) {
             $this->info("The model {$this->model} does not exists.");
 
-            if (! $this->confirm('Should I create it?', true)) {
+            if (!$this->confirm('Should I create it?', true)) {
                 return;
             }
 
