@@ -14,7 +14,7 @@ class SeederGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/seeds/seed.stub');
+        return File::get(__DIR__.'/../stubs/seeds/seed.stub');
     }
 
     /**
