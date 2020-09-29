@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use {{MODEL_NAMESPACE}}\{{MODEL_NAME}};
 use Illuminate\Database\Seeder;
 
@@ -22,7 +24,7 @@ class {{CLASS_NAME}} extends Seeder
         $bar = $this->command->getOutput()->createProgressBar($this->numberOf{{MODEL_PLURAL}});
 
         for ($i = 0; $i < $this->numberOf{{MODEL_PLURAL}}; ++$i) {
-            factory({{MODEL_NAME}}::class)->create();
+            {{MODEL_NAME}}::factory()->create();
             $bar->advance();
         }
 

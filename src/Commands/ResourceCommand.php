@@ -39,7 +39,7 @@ class ResourceCommand extends Command
     private $modelResources = [
         // 'migration' => MigrationGenerator::class,
         // 'factory' => FactoryGenerator::class,
-        // 'seeder' => SeederGenerator::class,
+        'seeder' => SeederGenerator::class,
     ];
 
     /**
