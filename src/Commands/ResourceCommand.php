@@ -28,7 +28,7 @@ class ResourceCommand extends Command
         // RequestGenerator::class,
         // PolicyGenerator::class,
         // ControllerGenerator::class,
-        // RouteGenerator::class,
+        RouteGenerator::class,
     ];
 
     /**
@@ -38,7 +38,7 @@ class ResourceCommand extends Command
      */
     private $modelResources = [
         // 'migration' => MigrationGenerator::class,
-        'factory' => FactoryGenerator::class,
+        // 'factory' => FactoryGenerator::class,
         // 'seeder' => SeederGenerator::class,
     ];
 
