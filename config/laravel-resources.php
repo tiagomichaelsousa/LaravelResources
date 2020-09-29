@@ -116,6 +116,6 @@ return [
     'database' => [
         'migrations' => 'database/migrations',
         'factories' => 'database/factories',
-        'seeds' => 'database/seeds',
+        'seeds' => 'database/seeders',
     ],
 ];
