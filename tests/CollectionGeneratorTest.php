@@ -30,7 +30,7 @@ class CollectionGeneratorTest extends TestCase
     public function it_creates_the_collection_file()
     {
         $generator = new CollectionGenerator($this->model);
-        $config = namespace_path(config('laravel-resources.collections.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.collections.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -43,7 +43,7 @@ class CollectionGeneratorTest extends TestCase
         config()->set('laravel-resources.collections.namespace', 'App\Http\Resources');
         $generator = new CollectionGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.collections.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.collections.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
