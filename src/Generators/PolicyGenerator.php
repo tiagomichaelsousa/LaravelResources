@@ -13,7 +13,7 @@ class PolicyGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/policies/api.policies.stub');
+        return File::get(__DIR__.'/../stubs/policies/api.policies.stub');
     }
 
     /**
