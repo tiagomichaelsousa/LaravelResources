@@ -3,7 +3,6 @@
 namespace tiagomichaelsousa\LaravelResources\Tests;
 
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 class ResourceCommandTest extends TestCase
 {
@@ -22,7 +21,7 @@ class ResourceCommandTest extends TestCase
     {
         $this->defaultQuestions();
 
-        $path = namespace_path(config('laravel-resources.models.namespace') . "\\Foo.php");
+        $path = namespace_path(config('laravel-resources.models.namespace').'\\Foo.php');
 
         $this->assertTrue(File::exists($path));
     }
@@ -32,7 +31,7 @@ class ResourceCommandTest extends TestCase
     {
         $this->defaultQuestions(['migration']);
 
-        $this->assertEquals(1, collect(File::files(database_path("/migrations")))->count());
+        $this->assertEquals(1, collect(File::files(database_path('/migrations')))->count());
     }
 
     /** @test */
@@ -40,7 +39,7 @@ class ResourceCommandTest extends TestCase
     {
         $this->defaultQuestions(['factory']);
 
-        $this->assertEquals(1, collect(File::files(database_path("/factories")))->count());
+        $this->assertEquals(1, collect(File::files(database_path('/factories')))->count());
     }
 
     /** @test */
@@ -48,9 +47,9 @@ class ResourceCommandTest extends TestCase
     {
         $this->defaultQuestions(['migration', 'factory', 'seeder']);
 
-        $this->assertEquals(1, collect(File::files(database_path("/migrations")))->count());
-        $this->assertEquals(1, collect(File::files(database_path("/seeders")))->count());
-        $this->assertEquals(1, collect(File::files(database_path("/factories")))->count());
+        $this->assertEquals(1, collect(File::files(database_path('/migrations')))->count());
+        $this->assertEquals(1, collect(File::files(database_path('/seeders')))->count());
+        $this->assertEquals(1, collect(File::files(database_path('/factories')))->count());
     }
 
     /** @test */
@@ -58,7 +57,7 @@ class ResourceCommandTest extends TestCase
     {
         $this->defaultQuestions(['seeder']);
 
-        $this->assertEquals(1, collect(File::files(database_path("/seeders")))->count());
+        $this->assertEquals(1, collect(File::files(database_path('/seeders')))->count());
     }
 
     /**
@@ -71,8 +70,8 @@ class ResourceCommandTest extends TestCase
         $this->artisan('resources:create', ['model' => 'Foo'])
             ->expectsOutput('The model Foo does not exists.')
             ->expectsQuestion('Should I create it?', $shouldCreate)
-            ->expectsQuestion("Should I create the migration for Foo?", in_array('migration', $args))
-            ->expectsQuestion("Should I create the factory for Foo?", in_array('factory', $args))
-            ->expectsQuestion("Should I create the seeder for Foo?", in_array('seeder', $args));
+            ->expectsQuestion('Should I create the migration for Foo?', in_array('migration', $args))
+            ->expectsQuestion('Should I create the factory for Foo?', in_array('factory', $args))
+            ->expectsQuestion('Should I create the seeder for Foo?', in_array('seeder', $args));
     }
 }
