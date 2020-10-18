@@ -13,7 +13,7 @@ class ResourceGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__.'/../stubs/resources/api.resource.stub');
+        return File::get(__DIR__ . '/../stubs/resources/api.resource.stub');
     }
 
     /**
@@ -24,7 +24,7 @@ class ResourceGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{NAMESPACE}}'  => config('laravel-resources.resources.namespace'),
+            '{{NAMESPACE}}' => config('laravel-resources.resources.namespace'),
             '{{CLASS_NAME}}' => "{$this->className()}",
         ]);
     }
