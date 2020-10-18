@@ -31,7 +31,7 @@ class ResourceGeneratorTest extends TestCase
     {
         $generator = new ResourceGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.resources.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.resources.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -45,7 +45,7 @@ class ResourceGeneratorTest extends TestCase
 
         $generator = new ResourceGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.resources.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.resources.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 

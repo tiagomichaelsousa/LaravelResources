@@ -2,8 +2,8 @@
 
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use tiagomichaelsousa\LaravelResources\Exceptions\File as FileException;
 
 class RouteGenerator extends AbstractGenerator
@@ -15,7 +15,7 @@ class RouteGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__.'/../stubs/routes/api.routes.stub');
+        return File::get(__DIR__ . '/../stubs/routes/api.routes.stub');
     }
 
     /**
@@ -26,10 +26,10 @@ class RouteGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{MODEL_NAME}}'      => $this->model,
-            '{{MODEL_VARIABLE}}'  => lcfirst($this->model),
+            '{{MODEL_NAME}}' => $this->model,
+            '{{MODEL_VARIABLE}}' => lcfirst($this->model),
             '{{CONTROLLER_NAME}}' => $this->generateControllerName(),
-            '{{ROUTE_NAME}}'      => Str::plural(Str::kebab($this->model)),
+            '{{ROUTE_NAME}}' => Str::plural(Str::kebab($this->model)),
         ]);
     }
 
