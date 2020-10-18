@@ -4,16 +4,16 @@ namespace tiagomichaelsousa\LaravelResources\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use tiagomichaelsousa\LaravelResources\Generators\ModelGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\RouteGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\PolicyGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\SeederGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\FactoryGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\RequestGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\ResourceGenerator;
-use tiagomichaelsousa\LaravelResources\Generators\MigrationGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\CollectionGenerator;
 use tiagomichaelsousa\LaravelResources\Generators\ControllerGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\FactoryGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\MigrationGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\ModelGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\PolicyGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\RequestGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\ResourceGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\RouteGenerator;
+use tiagomichaelsousa\LaravelResources\Generators\SeederGenerator;
 
 class ResourceCommand extends Command
 {
@@ -38,8 +38,8 @@ class ResourceCommand extends Command
      */
     private $modelResources = [
         'migration' => MigrationGenerator::class,
-        'factory' => FactoryGenerator::class,
-        'seeder' => SeederGenerator::class,
+        'factory'   => FactoryGenerator::class,
+        'seeder'    => SeederGenerator::class,
     ];
 
     /**
@@ -71,7 +71,7 @@ class ResourceCommand extends Command
      */
     private function modelExists()
     {
-        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace')))) . "/{$this->model}.php");
+        return File::exists(base_path(lcfirst(str_replace('\\', '/', config('laravel-resources.models.namespace'))))."/{$this->model}.php");
     }
 
     /**
@@ -95,7 +95,7 @@ class ResourceCommand extends Command
      */
     private function createResources()
     {
-        $this->info('Creating ' . count($this->resources) . ' resources ...');
+        $this->info('Creating '.count($this->resources).' resources ...');
         $this->line('');
 
         $bar = $this->getOutput()->createProgressBar(count($this->resources));
@@ -127,10 +127,10 @@ class ResourceCommand extends Command
 
         $this->model = $this->argument('model');
 
-        if (! $this->modelExists()) {
+        if (!$this->modelExists()) {
             $this->info("The model {$this->model} does not exists.");
 
-            if (! $this->confirm('Should I create it?', true)) {
+            if (!$this->confirm('Should I create it?', true)) {
                 return;
             }
 

@@ -21,7 +21,7 @@ class ResourceCommandTest extends TestCase
     {
         $this->defaultQuestions();
 
-        $path = namespace_path(config('laravel-resources.models.namespace') . '\\Foo.php');
+        $path = namespace_path(config('laravel-resources.models.namespace').'\\Foo.php');
 
         $this->assertTrue(File::exists($path));
     }
