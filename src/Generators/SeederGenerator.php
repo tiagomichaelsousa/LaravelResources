@@ -2,8 +2,8 @@
 
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class SeederGenerator extends AbstractGenerator
 {
@@ -14,7 +14,7 @@ class SeederGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__.'/../stubs/seeds/seed.stub');
+        return File::get(__DIR__ . '/../stubs/seeds/seed.stub');
     }
 
     /**
@@ -26,9 +26,9 @@ class SeederGenerator extends AbstractGenerator
     {
         return array_merge([
             '{{MODEL_NAMESPACE}}' => config('laravel-resources.models.namespace'),
-            '{{MODEL_NAME}}'      => $this->model,
-            '{{MODEL_PLURAL}}'    => Str::plural($this->model),
-            '{{CLASS_NAME}}'      => $this->className(),
+            '{{MODEL_NAME}}' => $this->model,
+            '{{MODEL_PLURAL}}' => Str::plural($this->model),
+            '{{CLASS_NAME}}' => $this->className(),
         ]);
     }
 
