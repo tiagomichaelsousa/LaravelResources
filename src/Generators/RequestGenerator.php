@@ -13,7 +13,7 @@ class RequestGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/requests/api.request.stub');
+        return File::get(__DIR__.'/../stubs/requests/api.request.stub');
     }
 
     /**
@@ -24,7 +24,7 @@ class RequestGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{NAMESPACE}}' => config('laravel-resources.requests.namespace'),
+            '{{NAMESPACE}}'  => config('laravel-resources.requests.namespace'),
             '{{CLASS_NAME}}' => $this->className(),
         ]);
     }
