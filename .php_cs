@@ -40,9 +40,6 @@ return PhpCsFixer\Config::create()
         'align_multiline_comment' => array(
             'comment_type' => 'all_multiline',
         ),
-
-
-
         'binary_operator_spaces' => array(
             'align_double_arrow' => false,
             'align_equals' => false,
