@@ -21,7 +21,7 @@ class MigrationGeneratorTest extends TestCase
     {
         $generator = new MigrationGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.migrations') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.migrations')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -35,7 +35,7 @@ class MigrationGeneratorTest extends TestCase
 
         $generator = new MigrationGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.migrations') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.migrations')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -47,7 +47,7 @@ class MigrationGeneratorTest extends TestCase
     {
         $generator = new MigrationGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.migrations') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.migrations')."\\{$generator->fileName()}");
 
         $generator->handle();
 
