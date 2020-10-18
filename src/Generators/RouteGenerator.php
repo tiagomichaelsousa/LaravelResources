@@ -26,10 +26,10 @@ class RouteGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{MODEL_NAME}}' => $this->model,
-            '{{MODEL_VARIABLE}}' => lcfirst($this->model),
+            '{{MODEL_NAME}}'      => $this->model,
+            '{{MODEL_VARIABLE}}'  => lcfirst($this->model),
             '{{CONTROLLER_NAME}}' => $this->generateControllerName(),
-            '{{ROUTE_NAME}}' => Str::plural(Str::kebab($this->model)),
+            '{{ROUTE_NAME}}'      => Str::plural(Str::kebab($this->model)),
         ]);
     }
 

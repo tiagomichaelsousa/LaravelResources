@@ -24,10 +24,10 @@ class CollectionGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{NAMESPACE}}' => config('laravel-resources.collections.namespace'),
-            '{{CLASS_NAME}}' => "{$this->className()}",
-            '{{RESOURCE_NAMESPACE}}' => config('laravel-resources.resources.namespace'),
-            '{{RESOURCE_CLASS_NAME}}' =>  create_class_name($this->model, ResourceGenerator::class),
+            '{{NAMESPACE}}'           => config('laravel-resources.collections.namespace'),
+            '{{CLASS_NAME}}'          => "{$this->className()}",
+            '{{RESOURCE_NAMESPACE}}'  => config('laravel-resources.resources.namespace'),
+            '{{RESOURCE_CLASS_NAME}}' => create_class_name($this->model, ResourceGenerator::class),
         ]);
     }
 

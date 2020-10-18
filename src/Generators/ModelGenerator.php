@@ -24,7 +24,7 @@ class ModelGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{NAMESPACE}}' => config('laravel-resources.models.namespace'),
+            '{{NAMESPACE}}'  => config('laravel-resources.models.namespace'),
             '{{CLASS_NAME}}' => $this->model,
         ]);
     }
