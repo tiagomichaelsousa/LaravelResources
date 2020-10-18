@@ -31,7 +31,7 @@ class PolicyGeneratorTest extends TestCase
     {
         $generator = new PolicyGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.policies.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.policies.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -45,7 +45,7 @@ class PolicyGeneratorTest extends TestCase
 
         $generator = new PolicyGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.policies.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.policies.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
