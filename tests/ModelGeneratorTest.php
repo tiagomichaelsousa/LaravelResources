@@ -18,7 +18,7 @@ class ModelGeneratorTest extends TestCase
     {
         $generator = new ModelGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.models.namespace') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.models.namespace')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -32,7 +32,7 @@ class ModelGeneratorTest extends TestCase
 
         $generator = new ModelGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.models.namespace') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.models.namespace')."\\{$generator->fileName()}");
 
         $generator->handle();
 
