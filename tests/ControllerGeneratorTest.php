@@ -31,7 +31,7 @@ class ControllerGeneratorTest extends TestCase
     {
         $generator = new ControllerGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.controllers.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.controllers.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -45,7 +45,7 @@ class ControllerGeneratorTest extends TestCase
 
         $generator = new ControllerGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.controllers.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.controllers.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
