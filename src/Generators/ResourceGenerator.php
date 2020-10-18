@@ -24,7 +24,7 @@ class ResourceGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{NAMESPACE}}' => config('laravel-resources.resources.namespace'),
+            '{{NAMESPACE}}'  => config('laravel-resources.resources.namespace'),
             '{{CLASS_NAME}}' => "{$this->className()}",
         ]);
     }
