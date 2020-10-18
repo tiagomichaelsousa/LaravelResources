@@ -13,7 +13,7 @@ class CollectionGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/resources/api.collection.stub');
+        return File::get(__DIR__.'/../stubs/resources/api.collection.stub');
     }
 
     /**
@@ -24,9 +24,9 @@ class CollectionGenerator extends AbstractGenerator
     public function replacements()
     {
         return array_merge([
-            '{{NAMESPACE}}' => config('laravel-resources.collections.namespace'),
-            '{{CLASS_NAME}}' => "{$this->className()}",
-            '{{RESOURCE_NAMESPACE}}' => config('laravel-resources.resources.namespace'),
+            '{{NAMESPACE}}'           => config('laravel-resources.collections.namespace'),
+            '{{CLASS_NAME}}'          => "{$this->className()}",
+            '{{RESOURCE_NAMESPACE}}'  => config('laravel-resources.resources.namespace'),
             '{{RESOURCE_CLASS_NAME}}' => create_class_name($this->model, ResourceGenerator::class),
         ]);
     }
