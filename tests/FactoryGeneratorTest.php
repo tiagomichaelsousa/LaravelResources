@@ -13,7 +13,7 @@ class FactoryGeneratorTest extends TestCase
         $filename = $generator->className();
         $generator->handle();
 
-        $this->assertEquals($filename, "UserFactory");
+        $this->assertEquals($filename, 'UserFactory');
     }
 
     /** @test */
@@ -21,7 +21,7 @@ class FactoryGeneratorTest extends TestCase
     {
         $generator = new FactoryGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.factories') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.factories')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -35,7 +35,7 @@ class FactoryGeneratorTest extends TestCase
 
         $generator = new FactoryGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.factories') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.factories')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -47,7 +47,7 @@ class FactoryGeneratorTest extends TestCase
     {
         $generator = new FactoryGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.factories') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.factories')."\\{$generator->fileName()}");
 
         $generator->handle();
 

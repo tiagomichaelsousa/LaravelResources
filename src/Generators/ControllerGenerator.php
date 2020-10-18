@@ -26,12 +26,12 @@ class ControllerGenerator extends AbstractGenerator
     {
         return array_merge(
             [
-                '{{NAMESPACE}}' => config('laravel-resources.controllers.namespace'),
-                '{{CONTROLLER_NAMESPACE}}' => config('laravel-resources.controllers.namespace'),
-                '{{CONTROLLER_NAME}}' => "{$this->className()}",
-                '{{RESOURCE_NAMESPACE}}' => config('laravel-resources.resources.namespace').'\\'.create_class_name($this->model, ResourceGenerator::class),
+                '{{NAMESPACE}}'                     => config('laravel-resources.controllers.namespace'),
+                '{{CONTROLLER_NAMESPACE}}'          => config('laravel-resources.controllers.namespace'),
+                '{{CONTROLLER_NAME}}'               => "{$this->className()}",
+                '{{RESOURCE_NAMESPACE}}'            => config('laravel-resources.resources.namespace').'\\'.create_class_name($this->model, ResourceGenerator::class),
                 '{{RESOURCE_COLLECTION_NAMESPACE}}' => config('laravel-resources.collections.namespace').'\\'.create_class_name($this->model, CollectionGenerator::class),
-                '{{MODEL_CLASS}}' => "{$this->model}",
+                '{{MODEL_CLASS}}'                   => "{$this->model}",
             ],
             $this->modelReplacements(),
             $this->requestReplacements(),
@@ -52,8 +52,8 @@ class ControllerGenerator extends AbstractGenerator
             $stub = File::get(__DIR__."/../stubs/controllers/controller.method.{$method}.stub");
 
             $replaces = [
-                '{{CLASS_NAME}}' => $this->model,
-                '{{RESOURCE_NAME}}' => $method === 'index' ? create_class_name($this->model, CollectionGenerator::class) : create_class_name($this->model, ResourceGenerator::class),
+                '{{CLASS_NAME}}'     => $this->model,
+                '{{RESOURCE_NAME}}'  => $method === 'index' ? create_class_name($this->model, CollectionGenerator::class) : create_class_name($this->model, ResourceGenerator::class),
                 '{{CLASS_VARIABLE}}' => lcfirst($this->model),
             ];
 
@@ -73,8 +73,8 @@ class ControllerGenerator extends AbstractGenerator
     public function modelReplacements()
     {
         return [
-            '{{MODEL_CLASS}}' => $this->model,
-            '{{MODEL_VARIABLE}}' => lcfirst($this->model),
+            '{{MODEL_CLASS}}'     => $this->model,
+            '{{MODEL_VARIABLE}}'  => lcfirst($this->model),
             '{{MODEL_NAMESPACE}}' => config('laravel-resources.models.namespace')."\\{$this->model}",
         ];
     }
@@ -89,7 +89,7 @@ class ControllerGenerator extends AbstractGenerator
         $requestClass = create_class_name($this->model, RequestGenerator::class);
 
         return [
-            '{{REQUEST_CLASS}}' =>  $requestClass,
+            '{{REQUEST_CLASS}}'     => $requestClass,
             '{{REQUEST_NAMESPACE}}' => config('laravel-resources.requests.namespace')."\\{$requestClass}",
         ];
     }

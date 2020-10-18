@@ -26,9 +26,9 @@ class SeederGenerator extends AbstractGenerator
     {
         return array_merge([
             '{{MODEL_NAMESPACE}}' => config('laravel-resources.models.namespace'),
-            '{{MODEL_NAME}}' => $this->model,
-            '{{MODEL_PLURAL}}' => Str::plural($this->model),
-            '{{CLASS_NAME}}' => $this->className(),
+            '{{MODEL_NAME}}'      => $this->model,
+            '{{MODEL_PLURAL}}'    => Str::plural($this->model),
+            '{{CLASS_NAME}}'      => $this->className(),
         ]);
     }
 

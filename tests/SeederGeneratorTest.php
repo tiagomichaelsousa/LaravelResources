@@ -13,7 +13,7 @@ class SeederGeneratorTest extends TestCase
         $filename = $generator->className();
         $generator->handle();
 
-        $this->assertEquals($filename, "UsersTableSeeder");
+        $this->assertEquals($filename, 'UsersTableSeeder');
     }
 
     /** @test */
@@ -21,7 +21,7 @@ class SeederGeneratorTest extends TestCase
     {
         $generator = new SeederGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.seeds') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.seeds')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -35,7 +35,7 @@ class SeederGeneratorTest extends TestCase
 
         $generator = new SeederGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.seeds') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.seeds')."\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -47,7 +47,7 @@ class SeederGeneratorTest extends TestCase
     {
         $generator = new SeederGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.database.seeds') . "\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.database.seeds')."\\{$generator->fileName()}");
 
         $generator->handle();
 

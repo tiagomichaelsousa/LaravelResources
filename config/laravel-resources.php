@@ -14,8 +14,8 @@ return [
     */
     'controllers' => [
         'namespace' => 'App\Http\Controllers',
-        'suffix' => 'API',
-        'prefix' => null,
+        'suffix'    => 'API',
+        'prefix'    => null,
     ],
 
     /*
@@ -32,14 +32,14 @@ return [
     */
     'resources' => [
         'namespace' => 'App\Http\Resources',
-        'suffix' => null,
-        'prefix' => null,
+        'suffix'    => null,
+        'prefix'    => null,
     ],
 
     'collections' => [
         'namespace' => 'App\Http\Resources\Collections',
-        'suffix' => null,
-        'prefix' => null,
+        'suffix'    => null,
+        'prefix'    => null,
     ],
 
     /*
@@ -56,8 +56,8 @@ return [
     */
     'requests' => [
         'namespace' => 'App\Http\Requests',
-        'suffix' => null,
-        'prefix' => null,
+        'suffix'    => null,
+        'prefix'    => null,
     ],
 
     /*
@@ -72,8 +72,8 @@ return [
     */
     'policies' => [
         'namespace' => 'App\Policies',
-        'suffix' => null,
-        'prefix' => null,
+        'suffix'    => null,
+        'prefix'    => null,
     ],
 
     /*
@@ -100,7 +100,7 @@ return [
     |
     */
     'routes' => [
-        'path' => 'routes',
+        'path'     => 'routes',
         'filename' => 'api.php',
     ],
 
@@ -115,7 +115,7 @@ return [
     */
     'database' => [
         'migrations' => 'database/migrations',
-        'factories' => 'database/factories',
-        'seeds' => 'database/seeders',
+        'factories'  => 'database/factories',
+        'seeds'      => 'database/seeders',
     ],
 ];
