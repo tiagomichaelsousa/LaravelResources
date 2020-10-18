@@ -13,7 +13,7 @@ class FactoryGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__ . '/../stubs/factories/factory.stub');
+        return File::get(__DIR__.'/../stubs/factories/factory.stub');
     }
 
     /**
@@ -25,8 +25,8 @@ class FactoryGenerator extends AbstractGenerator
     {
         return array_merge([
             '{{MODEL_NAMESPACE}}' => config('laravel-resources.models.namespace'),
-            '{{MODEL_NAME}}' => $this->model,
-            '{{CLASS_NAME}}' => $this->className(),
+            '{{MODEL_NAME}}'      => $this->model,
+            '{{CLASS_NAME}}'      => $this->className(),
         ]);
     }
 
