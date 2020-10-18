@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
-if (!function_exists('make_directory')) {
+if (! function_exists('make_directory')) {
     /**
      * Create recursive directory.
      *
@@ -20,7 +20,7 @@ if (!function_exists('make_directory')) {
     }
 }
 
-if (!function_exists('namespace_path')) {
+if (! function_exists('namespace_path')) {
     /**
      * Receive a namespace and convert it to a path.
      *
@@ -34,7 +34,7 @@ if (!function_exists('namespace_path')) {
     }
 }
 
-if (!function_exists('create_class_name')) {
+if (! function_exists('create_class_name')) {
     /**
      * Receive a classname for a resource.
      *
@@ -48,11 +48,11 @@ if (!function_exists('create_class_name')) {
         $configKey = Str::plural(strtolower($resource));
         $className = "{$model}{$resource}";
 
-        if (!is_null($suffix = config("laravel-resources.{$configKey}.suffix"))) {
+        if (! is_null($suffix = config("laravel-resources.{$configKey}.suffix"))) {
             $className = Str::finish($className, $suffix);
         }
 
-        if (!is_null($prefix = config("laravel-resources.{$configKey}.prefix"))) {
+        if (! is_null($prefix = config("laravel-resources.{$configKey}.prefix"))) {
             $className = Str::start($className, $prefix);
         }
 
