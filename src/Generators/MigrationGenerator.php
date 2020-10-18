@@ -3,8 +3,8 @@
 namespace tiagomichaelsousa\LaravelResources\Generators;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class MigrationGenerator extends AbstractGenerator
 {
@@ -15,7 +15,7 @@ class MigrationGenerator extends AbstractGenerator
      */
     public function getStub()
     {
-        return File::get(__DIR__.'/../stubs/migrations/migration.stub');
+        return File::get(__DIR__ . '/../stubs/migrations/migration.stub');
     }
 
     /**
