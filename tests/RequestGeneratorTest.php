@@ -31,7 +31,7 @@ class RequestGeneratorTest extends TestCase
     {
         $generator = new RequestGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.requests.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.requests.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
@@ -45,7 +45,7 @@ class RequestGeneratorTest extends TestCase
 
         $generator = new RequestGenerator($this->model);
 
-        $config = namespace_path(config('laravel-resources.requests.namespace')."\\{$generator->fileName()}");
+        $config = namespace_path(config('laravel-resources.requests.namespace') . "\\{$generator->fileName()}");
 
         $generator->handle();
 
