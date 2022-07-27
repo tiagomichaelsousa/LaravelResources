@@ -3,10 +3,10 @@
 | {{MODEL_NAME}} endpoints
 |--------------------------------------------------------------------------
  */
-Route::name('{{ROUTE_NAME}}.')->prefix('{{ROUTE_NAME}}')->group(function () {
-    Route::get('/', [{{CONTROLLER_NAME}}::class, 'index'])->name('index');
-    Route::post('/', [{{CONTROLLER_NAME}}::class, 'store'])->name('create');
-    Route::get('/{{{MODEL_VARIABLE}}}', [{{CONTROLLER_NAME}}::class, 'show'])->name('show');
-    Route::patch('/{{{MODEL_VARIABLE}}}', [{{CONTROLLER_NAME}}::class, 'update'])->name('update');
-    Route::delete('/{{{MODEL_VARIABLE}}}', [{{CONTROLLER_NAME}}::class, 'destroy'])->name('destroy');
+Route::name('{{ROUTE_NAME}}.')->controller({{CONTROLLER_NAME}}::class)->prefix('{{ROUTE_NAME}}')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::post('/', 'store')->name('create');
+    Route::get('/{{{MODEL_VARIABLE}}}', 'show')->name('show');
+    Route::patch('/{{{MODEL_VARIABLE}}}', 'update')->name('update');
+    Route::delete('/{{{MODEL_VARIABLE}}}', 'destroy')->name('destroy');
 });
