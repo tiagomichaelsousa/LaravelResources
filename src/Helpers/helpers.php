@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 if (! function_exists('make_directory')) {
-
     /**
      * Create recursive directory.
      *
@@ -21,7 +20,6 @@ if (! function_exists('make_directory')) {
 }
 
 if (! function_exists('namespace_path')) {
-
     /**
      * Receive a namespace and convert it to a path.
      *
@@ -35,7 +33,6 @@ if (! function_exists('namespace_path')) {
 }
 
 if (! function_exists('create_class_name')) {
-
     /**
      * Receive a classname for a resource.
      *
