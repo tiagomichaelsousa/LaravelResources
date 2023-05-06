@@ -11,10 +11,8 @@ class {{CLASS_NAME}} extends Seeder
 
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         $this->command->table(['{{MODEL_PLURAL}} table seeder notice'], [
             ['Edit this file to change the number of {{MODEL_PLURAL}} created'],

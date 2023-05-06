@@ -5,21 +5,17 @@ namespace Database\Factories;
 use {{MODEL_NAMESPACE}}\{{MODEL_NAME}};
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\{{MODEL_NAMESPACE}}\{{MODEL_NAME}}>
+ */
 class {{CLASS_NAME}} extends Factory
 {
     /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = {{MODEL_NAME}}::class;
-
-    /**
      * Define the model's default state.
      *
-     * @return array
+     * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
            'name' => $this->faker->name,

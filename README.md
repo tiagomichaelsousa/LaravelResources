@@ -22,11 +22,12 @@ Laravel Resources is a speed-up development package that allows you to create a 
 
 ## Versions
 
-| Laravel | Laravel Resources |
-|---------| ----------------- |
-| 7.x     | v1.7              |
-| 8.x     | v2.x              |
-| 9.x     | v2.x              |
+| Laravel  | Laravel Resources |
+|----------| ----------------- |
+| 7.x      | v1.7              |
+| 8.x      | v2.x              |
+| 9.x      | v2.x              |
+| 10.x     | v3.x              |
 
 ## Installation
 
