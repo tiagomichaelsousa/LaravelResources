@@ -12,8 +12,6 @@ class {{CONTROLLER_NAME}} extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return {{RESOURCE_COLLECTION_NAMESPACE}}
      */
     public function index()
     {
@@ -24,9 +22,6 @@ class {{CONTROLLER_NAME}} extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \{{REQUEST_NAMESPACE}}  $request
-     * @return \{{RESOURCE_NAMESPACE}}
      */
     public function store({{REQUEST_CLASS}} $request)
     {
@@ -37,9 +32,6 @@ class {{CONTROLLER_NAME}} extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param  \{{MODEL_NAMESPACE}}  ${{MODEL_VARIABLE}}
-     * @return \{{RESOURCE_NAMESPACE}}
      */
     public function show({{MODEL_CLASS}} ${{MODEL_VARIABLE}})
     {
@@ -50,10 +42,6 @@ class {{CONTROLLER_NAME}} extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \{{REQUEST_NAMESPACE}}  $request
-     * @param  \{{MODEL_NAMESPACE}}  ${{MODEL_VARIABLE}}
-     * @return \{{RESOURCE_NAMESPACE}}
      */
     public function update({{REQUEST_CLASS}} $request, {{MODEL_CLASS}} ${{MODEL_VARIABLE}})
     {
@@ -64,9 +52,6 @@ class {{CONTROLLER_NAME}} extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  \{{MODEL_NAMESPACE}}  ${{MODEL_VARIABLE}}
-     * @return \{{RESOURCE_NAMESPACE}}
      */
     public function destroy({{MODEL_CLASS}} ${{MODEL_VARIABLE}})
     {
