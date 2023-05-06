@@ -8,16 +8,13 @@ return new class extends Migration
 {
     /**
      * Schema table name to migrate
-     * @var string
      */
     public $table = '{{TABLE_NAME}}';
 
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create($this->table, function (Blueprint $table) {
             $table->id();
@@ -28,10 +25,8 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists($this->table);
     }
